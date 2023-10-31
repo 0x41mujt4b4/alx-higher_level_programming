@@ -6,4 +6,5 @@ def uppercase(str):
             result += chr(ord(s) - 97 + 65)
         else:
             result += s
+    print("{}".format(result))
     return result
