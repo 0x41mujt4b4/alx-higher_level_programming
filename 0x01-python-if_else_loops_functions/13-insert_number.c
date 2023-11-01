@@ -5,13 +5,14 @@
 /**
  * insert_node - insert node into list
  * @head: the list
- * @n: the value to add
+ * @number: the value to add
  *
  * Return: address of inserted node or null
  */
 listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *current, *new;
+
 	current = *head;
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
