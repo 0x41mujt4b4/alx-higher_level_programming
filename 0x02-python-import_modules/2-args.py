@@ -3,7 +3,7 @@ from sys import argv
 
 if __name__ == '__main__':
     argc = len(argv) - 1
-    if (not argc):
+    if not argc:
         print("{} arguments.".format(argc))
     else:
         print("{} arguments:".format(argc))
