@@ -1,6 +1,6 @@
 #include <Python.h>
-#include "object.h"
-#include "listobject.h"
+#include <object.h>
+#include <listobject.h>
 /**
  * print_python_list_info - print python list
  * @p: pointer to python list object
