@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -10,7 +11,8 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *current;
-	unsigned int n;
+	unsigned int n, i, j;
+	int *arr;
 
 	current = *head;
 	if (current == NULL)
@@ -21,24 +23,23 @@ int is_palindrome(listint_t **head)
 		current = current->next;
 		n++;
 	}
+	arr = malloc(n * sizeof(int));
+	if (arr == NULL)
+		return (0);
 	current = *head;
-	int arr[n];
-	int i = 0;
-	int j = n - 1;
-
-	while (current != NULL)
+	for (i = 0; i < n; i++)
 	{
 		arr[i] = current->n;
 		current = current->next;
-		i++;
 	}
-	i = 0;
-	while (i < j)
+	for (i = 0, j = n - 1; i < j; i++, j--)
 	{
 		if (arr[i] != arr[j])
+		{
+			free(arr);
 			return (0);
-		i++;
-		j--;
+		}
 	}
+	free(arr);
 	return (1);
 }
