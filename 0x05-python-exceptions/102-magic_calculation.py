@@ -11,4 +11,3 @@ def magic_calculation(a, b):
             b += a
             break
     return result
-print(magic_calculation(0, 1))
