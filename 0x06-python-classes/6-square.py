@@ -28,6 +28,7 @@ class Square:
         if value < 0:
             raise ValueError('size must be >= 0')
         self.__size = value
+
     @property
     def position(self):
         """Returns the position of the square
@@ -66,4 +67,4 @@ class Square:
             for i in range(self.__size):
                 for k in range(self.__position[0]):
                     print(" ",  end="")
-                print("#" * (self.__size))
+                print("#" * (self.__size)) 
