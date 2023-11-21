@@ -2,5 +2,7 @@
 
 class Square:
     '''
+    A class representing a square
+    Attributes:
     '''
     pass
