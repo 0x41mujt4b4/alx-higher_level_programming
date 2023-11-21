@@ -11,7 +11,7 @@ class Square:
         if size < 0:
             raise ValueError('size must be >= 0')
         self.__size = size
-        self.position = position
+        self.__position = position
 
     def area(self):
         """A method that return square object area"""
@@ -33,7 +33,9 @@ class Square:
         if self.size == 0:
             print()
         else:
+            for j in range(self.__position[1]):
+                print()
             for i in range(self.size):
-                if self.position[1] <= 0:
+                if self.__position[1] <= 0:
                     print(' ' * self.position[0], end='')
                 print('#' * self.size)
