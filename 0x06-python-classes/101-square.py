@@ -73,7 +73,5 @@ class Square:
             for j in range(self.__position[1]):
                 to_print.append('\n')
             for i in range(self.__size):
-                for k in range(self.__position[0]):
-                    to_print.append(" ")
-                to_print.append("#" * self.__size + "\n")
-            return "".join(to_print)
+                to_print.append(" " * self.__position[0] + "#" * self.__size)
+            return "\n".join(to_print)
