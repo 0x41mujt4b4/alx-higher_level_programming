@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-
 """Define a rectangle class"""
 
-class  Rectangle:
+
+class Rectangle:
     """a class that represent Rectangle"""
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         if type(width) is not int:
             raise TypeError("width must be an integer")
