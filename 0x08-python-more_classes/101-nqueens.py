@@ -2,9 +2,11 @@
 
 def can_place(board, row, col):
     for i in range(col):
-        queen_can_attack = [board[i] == row,
-            board[i] - i == row - col,
-            board[i] + i == row + col]
+        queen_can_attack = [
+                board[i] == row,
+                board[i] - i == row - col,
+                board[i] + i == row + col
+                ]
         if any(queen_can_attack):
             return False
     return True
