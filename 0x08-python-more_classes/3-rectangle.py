@@ -44,7 +44,7 @@ class Rectangle:
         return self.width * self.height
 
     def perimeter(self):
-        if self.width == 0 or self.height == 0:
+        if self.width <= 0 or self.height <= 0:
             return 0
         return 2 * (self.width + self.height)
 
@@ -52,4 +52,4 @@ class Rectangle:
         rect_shape = []
         for i in range(self.height):
             rect_shape.append("#" * self.width)
-        return '\n'.join(rect_shape)
+        return '\n'.join(rect_shape) if any(rect_shape) else ''
