@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Define say_my_name module"""
 
+
 def say_my_name(first_name, last_name=""):
     """Prints the name of the person"""
     if type(first_name) is not str:

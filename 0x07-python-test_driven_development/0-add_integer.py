@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Define add_integer Module"""
 
+
 def add_integer(a, b=98):
     """Returns a + b"""
     if type(a) is not int and type(a) is not float:
@@ -12,8 +13,3 @@ def add_integer(a, b=98):
     if type(b) is float:
         b = int(b)
     return a + b
-
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testfile("0-add_integer.txt")

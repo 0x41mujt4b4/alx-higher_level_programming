@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines module that multiply two matrix"""
 
+
 def matrix_mul(m_a, m_b):
     """Returns a new matrix m_a * m_b"""
     if type(m_a) is not list:
@@ -37,7 +38,7 @@ def matrix_mul(m_a, m_b):
     b_rows = len(m_b)
     if a_cols != b_rows:
         raise ValueError("m_a and m_b can't be multiplied")
-    
+
     result = [[0 for _ in range(len(m_b[0]))] for _ in range(a_rows)]
     for i in range(a_rows):
         for j in range(len(m_b[0])):

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Define print_square module"""
 
+
 def print_square(size):
     """print square function"""
     if type(size) is not int:
@@ -9,4 +10,3 @@ def print_square(size):
         raise ValueError("size must be >= 0")
     for i in range(size):
         print('#' * size)
-        
