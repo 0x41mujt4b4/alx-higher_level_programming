@@ -1,8 +1,17 @@
 #!/usr/bin/python3
+"""Define matrix_divided module"""
 
 def matrix_divided(matrix, div):
+    """Returns elements of matrix divided by div"""
+    if not all(matrix):
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     if type(matrix) is not list:
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if not all(isinstance(row, list) for row in matrix):
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    for row in matrix:
+        if not all(isinstance(el, (int, float)) for el in row):
+            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
     if div == 0:
@@ -16,3 +25,8 @@ def matrix_divided(matrix, div):
         for j in range(row_size):
             new_matrix[i][j] = round(matrix[i][j] / div, 2)
     return new_matrix
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("2-matrix_divided.txt")
