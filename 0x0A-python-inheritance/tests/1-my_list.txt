@@ -2,14 +2,15 @@
 >>> my_list = MyList()
 >>> my_list
 []
+>>> isinstance(my_list, list)
+True
+>>> my_list.print_sorted()
+[]
 >>> my_list.append(5)
 >>> my_list.append(3)
 >>> my_list.append(1)
 >>> my_list.print_sorted()
 [1, 3, 5]
->>> my_list
-[5, 3, 1]
+>>> my_list.append(-15)
 >>> my_list.print_sorted()
-[1, 3, 5]
->>> my_list
-[5, 3, 1]
+[-15, 1, 3, 5]
