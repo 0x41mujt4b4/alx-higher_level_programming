@@ -1,17 +1,7 @@
 #!/usr/bin/python3
-Rectangle = __import__('8-rectangle').Rectangle
+MyInt = __import__('100-my_int').MyInt
 
-r = Rectangle(3, 5)
-
-print(r)
-print(dir(r))
-
-try:
-    print("Rectangle: {} - {}".format(r.width, r.height))
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-
-try:
-    r2 = Rectangle(4, True)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+my_i = MyInt(3)
+print(my_i)
+print(my_i == 3)
+print(my_i != 3)
