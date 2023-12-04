@@ -28,6 +28,11 @@ True
 >>> my_list.append(7)
 >>> my_list.print_sorted()
 [7, 7, 7, 7]
+>>> my_list.append(int('inf'))
+Traceback (most recent call last):
+  File "<pyshell#18>", line 1, in <module>
+    my_list.append(int('inf'))
+ValueError: invalid literal for int() with base 10: 'inf'
 >>> my_list.append(None)
 >>> my_list.print_sorted()
 Traceback (most recent call last):
