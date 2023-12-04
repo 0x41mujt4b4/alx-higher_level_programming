@@ -21,3 +21,11 @@ True
 >>> my_list.append(7)
 >>> my_list.print_sorted()
 [7, 7, 7, 7]
+>>> my_list.append(None)
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+  File "<pyshell#17>", line 1, in <module>
+    my_list.print_sorted()
+  File "<pyshell#1>", line 4, in print_sorted
+    print(sorted(self))
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
