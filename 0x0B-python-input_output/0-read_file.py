@@ -5,4 +5,4 @@
 def read_file(filename=""):
     """function to read a file"""
     with open(filename, 'r') as file:
-        file.read()
+        print(file.read())
