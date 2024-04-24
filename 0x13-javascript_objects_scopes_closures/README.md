@@ -1,0 +1,1 @@
+JavaScipt Objects scopes
