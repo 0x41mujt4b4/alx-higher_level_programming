@@ -1,12 +1,15 @@
+#!/usr/bin/python3
 import MySQLdb
 from sys import argv
 """module that connect to database and fetch data"""
 
+
 user = argv[1]
 passwd = argv[2]
 db = argv[3]
+conn = MySQLdb.CONNECT(host="localhost", port=3306,
+                            user=user, passwd=passwd, db=db, charset="utf8")
 
-conn = MySQLdb.CONNECT(host="localhost", port=3306, user=user, passwd=passwd, db=db, charset="utf8")
 
 def list_states():
     """function that list states from db"""
@@ -17,6 +20,7 @@ def list_states():
         print(row)
     cur.close()
     conn.close()
+
 
 if __name__ == '__main__':
     list_states()
