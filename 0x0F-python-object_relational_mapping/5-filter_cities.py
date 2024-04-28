@@ -10,9 +10,8 @@ if __name__ == "__main__":
     cur = conn.cursor()
     cur.execute("""SELECT cities.name FROM cities
                 JOIN states ON cities.state_id = states.id
-                Where states.name = %s
+                WHERE states.name = %s
                 ORDER BY cities.id ASC""", (argv[4], ))
-    query_rows = cur.fetchall()
     print(", ".join(map(lambda x: x[0], cur.fetchall())))
     cur.close()
     conn.close()
