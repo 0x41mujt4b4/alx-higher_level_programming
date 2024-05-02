@@ -10,7 +10,7 @@ Base = declarative_base()
 class State(Base):
     """state table class"""
     __tablename__ = 'states'
-    id = Column("id", Integer(11), primary_key=True, nullable=False)
+    id = Column("id", Integer, primary_key=True, nullable=False)
     name = Column("name", String(128), nullable=False)
 
     def __init__(self, id, name):
